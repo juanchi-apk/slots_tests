@@ -1,0 +1,2 @@
+export const SET_SINGLE_USER = 'SET_SINGLE_USER'
+export const SET_USER_TOKEN = 'SET_USER_TOKEN'

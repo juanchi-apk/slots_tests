@@ -1,0 +1,29 @@
+.dashboardContainer{
+    height:100vmax ;
+}
+
+.createButton{
+    height: 50px;
+    width:70%;
+    background-color:#6610f2;
+    border-width: 0px; 
+
+}
+.pageButtonBar{
+    background-color: #2e63b2;
+    margin:0px;
+}
+.pageButton{
+    background-color:#6610f2;
+    border-width: 0px;
+    margin-left: 2px;; 
+    width:5px
+
+}
+.userListBar{
+    background-color: #2e63b2;
+    height:60px;
+    display:flex;
+    align-items: center;
+    margin:0px;
+}
