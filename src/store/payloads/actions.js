@@ -3,7 +3,6 @@ from '../actions/actionTypes';
 
 
 export function setSingleUser(user){
-  
     return {type: SET_SINGLE_USER, payload: {user: user}}
 }
 export function setUserToken(token){

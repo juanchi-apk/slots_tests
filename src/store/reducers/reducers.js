@@ -13,6 +13,7 @@ const initialState = {
 export function rootReducer(state = initialState,  action) {
     switch (action.type) {
             case SET_SINGLE_USER: 
+           
             return {
                 ...state,
                 singleUser : action.payload.user

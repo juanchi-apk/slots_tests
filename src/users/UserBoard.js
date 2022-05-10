@@ -4,7 +4,11 @@ import Modal from "../Modals/modal";
 import ModifyUser from "./ModifyUser";
 import { setSingleUser } from "../store/payloads/actions";
 import { connect } from "react-redux";
-import {getOneUser} from '../api/users'
+import {getOneUser} from '../api/users';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import './userBoard.scss'
 
 function UserBoard({userData, setSingleUserData}){
 
@@ -24,9 +28,9 @@ function UserBoard({userData, setSingleUserData}){
 
   }
 
-  async function handleShow (event){
+  async function handleShow (event, id){
     event.preventDefault();
-    await getOneUser(event.target.value).then(data=>{
+    await getOneUser(id).then(data=>{
       setSingleUserData(data)
 
     })
@@ -55,9 +59,7 @@ function UserBoard({userData, setSingleUserData}){
       <th scope="col">Nombre</th>
       <th scope="col">Apellido</th>
       <th scope ="col"></th>
-      <th scope ="col"></th>
-      <th scope ="col"></th>
-
+      
     </tr>
   </thead>
   
@@ -75,16 +77,20 @@ function UserBoard({userData, setSingleUserData}){
                 <button 
                   type="button" 
                   onClick= {(event)=>{handleModify(event, element.first_name, element.id)}}
-                  className="btn btn-primary">Modificar</button>
-                </td>
-                <td>
+                  className="btn btn-primary usrbtn"><EditIcon/></button>
+               
                 <button 
                 type="button" 
-                className="btn btn-danger" 
-                onClick= {(event)=>{handleDelete(event, fullName , element.id)}}>Borrar</button>
-                </td>
-                <td>
-                <button type="button" className="btn btn-success" value={element.id} onClick= {(event)=>{handleShow(event)}}>Ver</button>
+                className="btn btn-danger usrbtn" 
+                onClick= {(event)=>{handleDelete(event, fullName , element.id)}}>
+                  <DeleteIcon/>
+                </button>
+                <button
+                 type="button" 
+                 className="btn btn-success usrbtn" 
+                 value={element.id} onClick= {(event)=>{handleShow(event, element.id)}}>
+                <RemoveRedEyeIcon/>
+                  </button>
                 </td>
                 </tr>
                 
@@ -109,7 +115,6 @@ function UserBoard({userData, setSingleUserData}){
 function mapDispatchToProps(dispatch) {
   return {
       setSingleUserData: function (user) {
-        console.log(user)
           dispatch(setSingleUser(user))
       }
 
