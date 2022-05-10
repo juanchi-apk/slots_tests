@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 
-const api = axios.create( {baseURL: 'http://reqres.in'})
 
 export async function userLogin (formData) {
 

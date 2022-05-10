@@ -3,7 +3,6 @@ import "./userCard.scss"
 
 const UserCard = ({userData})=>{
 
-console.log(userData)
     return(
     <div className="sideContainer">
          {!userData && (

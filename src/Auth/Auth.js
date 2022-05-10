@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import {useNavigate } from 'react-router-dom';
 import { Parallax} from 'react-parallax';
 import Image from '../Assets/Images/background.jpg';
-import { Fade } from 'react-reveal';
+import { Fade } from "react-awesome-reveal";
 import { userLogin } from '../api/auth';
 import imagelogo from '../Assets/Images/logo.png'
 import {Alert} from '@mui/material';
@@ -65,7 +65,7 @@ function Auth({setAuthToken}) {
                 strength={-400}
                 bgImageStyle={{ opacity: '.4 ' }}
                 >
-                    <Fade left delay={1000}>
+                    <Fade direction="left" delay={1000}>
                         <div className='col-5 formcontainer'>
 
                             <div className="signup-form">

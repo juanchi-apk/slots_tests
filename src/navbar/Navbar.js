@@ -18,7 +18,6 @@ function Navbar({userToken, dropToken}) {
 
         navigate("/")
     }
-    console.log(userToken)
     
     return(
         <nav className="navbar navbar-light bg-light">

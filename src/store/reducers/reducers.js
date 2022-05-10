@@ -19,7 +19,6 @@ export function rootReducer(state = initialState,  action) {
                 singleUser : action.payload.user
             };
             case SET_USER_TOKEN:
-                console.log(action.payload)    
             return {
                     ...state,
                     userToken : action.payload.token

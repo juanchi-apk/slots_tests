@@ -17,7 +17,6 @@ const Dashboard = ({singleUser, userToken})=>{
 
     const navigate = useNavigate()
     const [userData, setUserData] = useState()
-    const [token_, setToken] =useState()
     const [page, setPage] = useState("1")
     const [pagination, setPagination] = useState("")
     const  [createIsOpen, createOpenModal, createCloseModal] = useModal(false)
@@ -38,7 +37,7 @@ const Dashboard = ({singleUser, userToken})=>{
         }
     
         }
-        ,[page])
+        ,[page, userToken, navigate])
         
 
         function handlePage (event){
@@ -46,7 +45,6 @@ const Dashboard = ({singleUser, userToken})=>{
             setPage(event.target.value)
         }
         
-        console.log(userToken)
         return (
 
     <div className='dashboardContainer'>

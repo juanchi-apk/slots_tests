@@ -26,12 +26,11 @@ function ModifyUser({formData, closeModal}){
     }
 
     useEffect(()=>{
-        console.log(formData)
         getOneUser(formData.id)
         .then(data=>{
             setUserDestroyData(data)
         })
-    },[])
+    },[formData])
 
 
     async function handleModifyUser(event) {

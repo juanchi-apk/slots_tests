@@ -67,7 +67,6 @@ function UserBoard({userData, setSingleUserData}){
       {
           userData.map(element => {
             const fullName=`${element.first_name} ${element.last_name}`
-            console.log(element.colorClass)
             return (
                 <tr  className = {`${element.colorClass} transactionClass`} key={element.id}>
                 <td>{element.id}</td>
