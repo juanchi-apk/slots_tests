@@ -7,7 +7,7 @@ import UserBoard from '../users/UserBoard';
 import { useModal } from '../Hooks/useModal';
 import Modal from '../Modals/modal'
 import UserCard from '../UserCards/UserCard';
-
+import * as DataFilters from '../constraints/dashboardFormatConstraints'
 
 import("./dashboard.scss");
 
@@ -31,13 +31,9 @@ const Dashboard = ({singleUser, userToken})=>{
             }else{
             
             getUserList(page).then(data=>{
-                let pagearray = []
-                let totalpages = data.total/data.per_page
-                setUserData(data.data);
-                for (let x=1;x<=totalpages;x++ ){
-                    pagearray.push(x)
-                }
-                setPagination(pagearray)
+                //DataFilters.injectColor(data.data)
+                setUserData(DataFilters.injectColor(data.data));
+                setPagination(DataFilters.dataPagination(data.total, data.per_page))
             })
         }
     

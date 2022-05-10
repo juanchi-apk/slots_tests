@@ -24,7 +24,7 @@ function Navbar({userToken, dropToken}) {
         <nav className="navbar navbar-light bg-light">
             <div className="container-fluid">
                 <img className = "logoImage" src={logo} alt="logo" />        
-                { userToken!=undefined &&(<button className = "btn btn-primary" onClick= {(event)=>(logOut(event))} >LOG OUT </button>)}
+                { userToken!=undefined &&(<button className = "btn btn-primary logoutbtn" onClick= {(event)=>(logOut(event))} >LOG OUT </button>)}
             </div>
         </nav>
     )

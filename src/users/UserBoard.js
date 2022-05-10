@@ -51,8 +51,8 @@ function UserBoard({userData, setSingleUserData}){
   return(
     <div> 
         <div>
-           <table className="table table-hover ">
-  <thead className="thead-dark">
+           <table className="table table-hover userTable">
+  <thead className="thead-dark table_header">
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Email</th>
@@ -63,12 +63,13 @@ function UserBoard({userData, setSingleUserData}){
     </tr>
   </thead>
   
-  <tbody>
+  <tbody className="tablebody">
       {
           userData.map(element => {
             const fullName=`${element.first_name} ${element.last_name}`
+            console.log(element.colorClass)
             return (
-                <tr className = "transactionClass" key={element.id}>
+                <tr  className = {`${element.colorClass} transactionClass`} key={element.id}>
                 <td>{element.id}</td>
                 <td>{element.email}</td>
                 <td>{element.first_name}</td>
