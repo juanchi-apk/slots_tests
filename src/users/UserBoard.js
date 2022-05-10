@@ -51,14 +51,14 @@ function UserBoard({userData, setSingleUserData}){
   return(
     <div> 
         <div>
-           <table className="table table-hover table-dark">
-  <thead>
+           <table className="table table-hover ">
+  <thead className="thead-dark">
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Email</th>
       <th scope="col">Nombre</th>
       <th scope="col">Apellido</th>
-      <th scope ="col"></th>
+      <th scope ="col">Action</th>
       
     </tr>
   </thead>
