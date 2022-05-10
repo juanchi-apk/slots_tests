@@ -1,5 +1,7 @@
-import React, {useState } from 'react';
-import {modifyUser, deleteUser} from '../api/users'
+import React, {useEffect, useState } from 'react';
+import {modifyUser, deleteUser} from '../api/users';
+import {getOneUser} from '../api/users'
+import UserCard from '../UserCards/UserCard';
 import('./modifyUser.scss')
 
 
@@ -12,6 +14,8 @@ function ModifyUser({formData, closeModal}){
             job:"",
             name:"",
         })
+    const [userDestroyData, setUserDestroyData] = useState()
+
 
     const  handleFormChanges =  (event) =>{
         event.preventDefault();
@@ -20,6 +24,14 @@ function ModifyUser({formData, closeModal}){
         setUpdateFormData({...updateFormData, [event.target.name] : event.target.value})
 
     }
+
+    useEffect(()=>{
+        console.log(formData)
+        getOneUser(formData.id)
+        .then(data=>{
+            setUserDestroyData(data)
+        })
+    },[])
 
 
     async function handleModifyUser(event) {
@@ -64,7 +76,7 @@ function ModifyUser({formData, closeModal}){
                     
                         <div className="form-group row col-sm-12 mx-auto">
                         <label htmlFor="inputAmount" className="col-sm-3 col-form-label">Name</label>
-                        <div className="col-sm-9">
+                        <div className="col-sm-9 btnContainer">
                             <input type="text" className="form-control " name="name" id="name" defaultValue={formData.firstName}    onChange={handleFormChanges}/> 
                         </div>
                          </div>
@@ -76,29 +88,32 @@ function ModifyUser({formData, closeModal}){
                         </div>
                     </div>
 
-                    <div className="form-group row mx-auto">
-                        <div className="offset-sm-2 col-sm-10">
-                            <button type="submit" className="btn btn-primary" >Modify</button>
-                        </div>
+                    <div className="form-group btnContainer">
+                            <button type="submit" className="btn btn-primary modifyDeletebtn" >Modify</button>
                     </div>
+                    
                 </form>
                 </div>)}
                 {formData.type=="delete" &&(
                     <div className=" mx-auto modifyFormBackground">
 
                     <form className='modifyFormFields ' onSubmit={handleDeleteUser}>
-                    
+                    <div className="form-group row col-sm-12 mx-auto">
+                        <div className="col-sm-9">
+                        <UserCard userData= {userDestroyData} />
+                        </div>
+                         </div>
+                        
                         <div className="form-group row col-sm-12 mx-auto">
                         <div className="col-sm-9">
-                            ¿Estas Seguro que quiere borrar el usuario {formData.name}, con ID {formData.id}?
+                            ¿Estas Seguro que quiere borrar este usuario?
                         </div>
                          </div>
 
-                    <div className="form-group row mx-auto">
-                        <div className="offset-sm-2 col-sm-10">
-                            <button type="submit" className="btn btn-primary" >Delete</button>
+                    <div className="form-group  btnContainer">
+                            <button type="submit" className="btn btn-primary modifyDeletebtn" >Delete</button>
                         </div>
-                    </div>
+                    
                 </form>
                 </div>
                     

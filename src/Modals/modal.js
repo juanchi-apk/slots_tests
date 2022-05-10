@@ -1,3 +1,4 @@
+import CloseIcon from '@mui/icons-material/Close';
 import "./modal.scss";
 
 
@@ -10,8 +11,8 @@ const Modal= ({children, isOpen, closeModal})=>{
  <article className= {`modal ${isOpen&&'isOpen'}`} >
 <div className="modalContainer">
 
-<div>
-    <button className="modal-close" onClick={closeModal}>Cancel</button>
+<div className='btnContainer'>
+    <button className="modal-close btn-primary" onClick={closeModal}><CloseIcon/></button>
     
 </div>
 {children}

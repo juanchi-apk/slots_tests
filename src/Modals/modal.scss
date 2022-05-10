@@ -17,7 +17,25 @@
 }
 
 .modalContainer{
-    width:500px;
-    height: 500px;
+    max-width:500px;
+    min-height: 500px;
     background-color: transparent;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.modal-close{
+    width: 60px;
+    border-radius: 2px;
+    background-color: #485fdf;
+
+}
+
+.btnContainer{
+    align-self: flex-end;
+
 }

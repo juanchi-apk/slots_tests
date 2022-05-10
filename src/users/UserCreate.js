@@ -51,7 +51,7 @@ function UserCreate({closeModal}) {
                         </div>
                     </div>
                     <div className="form-group">
-                                        <button type="submit" className="btn btn-success btn-lg btn-block signup-btn">Crear</button>
+                         <button type="submit" className="btn btn-success btn-lg btn-block signup-btn">Crear</button>
                     </div>
 
                 </form>

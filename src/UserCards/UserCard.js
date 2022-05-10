@@ -9,7 +9,7 @@ console.log(userData)
          {!userData && (
             <div className= "card userCard">Clickee en Ver para mostrar los datos de un usuario</div>
         
-        )}
+    )}
 
        {userData  &&(
         <div className="card userCard" style={{width: "18rem"}}>

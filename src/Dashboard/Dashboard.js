@@ -53,7 +53,7 @@ const Dashboard = ({singleUser, userToken})=>{
                 
          <div className = "row">
 
-         <div className ="col-sm-4">
+         <div className ="col-sm-4 userCardContainer">
         
          <UserCard userData={singleUser}></UserCard>    
         </div>

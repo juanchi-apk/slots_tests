@@ -5,19 +5,26 @@
 .createButton{
     height: 50px;
     width:70%;
-    background-color:#6610f2;
+    background-color:#485fdf;
     border-width: 0px; 
 
 }
 .pageButtonBar{
     background-color: #2e63b2;
     margin:0px;
+    padding-top: 2px;
 }
 .pageButton{
-    background-color:#6610f2;
+    background-color:#485fdf;
     border-width: 0px;
-    margin-left: 2px;; 
-    width:5px
+    margin-left: 3px;
+    width:5px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    box-shadow: 1px 1px 6px #485fdf;
+
+
+    
 
 }
 .userListBar{
@@ -28,4 +35,9 @@
     margin:0px;
     margin-bottom: 2px;
     
+}
+
+.userCardContainer{
+    display:flex;
+    justify-content: center;
 }

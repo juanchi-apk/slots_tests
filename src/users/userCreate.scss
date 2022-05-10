@@ -3,13 +3,17 @@
 }
 
 .formBackground{
-   background-color:  #e6faeb;
+   background-color:  #ffffff;
    padding:10px;
-   border-radius: 10px ;
+   border-radius: 3px ;
    box-shadow: -1px -1px teal;
    height: 300px;
 }
 
 .formFields{
     align-items: center;
+}
+
+.signup-btn{
+    background-color: #485fdf;
 }
