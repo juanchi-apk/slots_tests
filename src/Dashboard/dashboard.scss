@@ -1,6 +1,9 @@
 .dashboardContainer{
     height:100vmax ;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+
 }
 
 .createButton{
