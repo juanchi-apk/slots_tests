@@ -1,5 +1,6 @@
 .dashboardContainer{
     height:100vmax ;
+    box-sizing: border-box;
 }
 
 .createButton{
@@ -7,12 +8,15 @@
     width:70%;
     background-color:#485fdf;
     border-width: 0px; 
+    margin:0px
 
 }
 .pageButtonBar{
     background-color: #2e63b2;
     margin:0px;
     padding-top: 2px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .pageButton{
     background-color:#485fdf;
@@ -34,10 +38,20 @@
     align-items: center;
     margin:0px;
     margin-bottom: 2px;
+    padding-left: 0px;
+    padding-right: 0px;
+    min-width: 450px;
     
 }
+
+
 
 .userCardContainer{
     display:flex;
     justify-content: center;
+    margin:0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    min-width: 450px;
 }
+

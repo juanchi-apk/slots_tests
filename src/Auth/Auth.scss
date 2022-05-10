@@ -16,9 +16,14 @@
  align-self: center ;
  margin:auto;
 }
+
 .formcontainer{
     margin-top: 30px;
     width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .form-control {
     font-size: 14px;
@@ -38,15 +43,14 @@
 .signup-form {
     width: 100%;
     margin: 0 auto;
-    margin-left:10px;
     padding: 20px 5px;
     display:flex;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
     
 }
 .signup-form form {
-    width: 480px;
-
+    min-width: 300px;
     border-radius: 5px;
     margin-bottom: 20px;
     background: #fff;
@@ -54,7 +58,7 @@
     padding: 10px;
     display:flex;
     flex-direction:column;
-    align-self: center;
+    align-self: flex-end;
 }
 .signup-form a {
     color: #5cb85c;

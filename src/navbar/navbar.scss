@@ -1,6 +1,7 @@
 .navbar{
     box-shadow: 1px 1px 6px #485fdf;
     margin-bottom:30px;
+    min-width: 450px;
 }
 
 
@@ -10,4 +11,10 @@
 
 .logoutbtn{
     background-color: #485fdf;
+}
+
+.container-fluid{
+   
+    display: flex;
+    justify-content: space-between;
 }

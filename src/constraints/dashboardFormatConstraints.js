@@ -4,6 +4,7 @@ export const injectColor = (userArray)=>{
         userArray[i].colorClass ="table-secondary"
         }else{
          userArray[i].colorClass ="table-active"
+         userArray[i].alignCenter = "align-middle"
         }
     }
  return userArray

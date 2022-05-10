@@ -47,23 +47,28 @@ const Dashboard = ({singleUser, userToken})=>{
         
         return (
 
-    <div className='dashboardContainer'>
+    <div className=' row dashboardContainer'>
                 
-         <div className = "row">
+        
 
-         <div className ="col-sm-4 userCardContainer">
+         <div className ="col-12 col-lg-4  userCardContainer">
         
          <UserCard userData={singleUser}></UserCard>    
         </div>
 
-        <div  className ="col-sm-8">
-          <div className = " userListBar row">
-            <div className ="col-sm-4">
+        <div  className ="col-12  col-lg-8 userDataContainer">
+          <div className = " userListBar row ">
+              <div className='col-12'>
+            <div className ="col-4">
                 <button type="button" className="btn btn-danger createButton" onClick={createOpenModal}> + Crear Usuario</button>
             </div>
         </div>
-        <div className='row'>
+        </div>
+        
+        <div className='row '>
+        <div className='col-12'>
          {userData&& <UserBoard  userData= {userData}/>}
+         </div>
          </div>
          <div className='pageButtonBar row'>
             { (pagination.length>0) && pagination.map(element => {
@@ -83,7 +88,6 @@ const Dashboard = ({singleUser, userToken})=>{
          </div>
         
 
-         </div>
          <div>
 
          </div>

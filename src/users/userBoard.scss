@@ -1,7 +1,8 @@
 
 .usrbtn{
     margin-left: 5px;
-
+    max-width: 50px;
+   
 }
 
 .table_header{
@@ -11,5 +12,15 @@
 }
 
 .tablebody td{
-text-align: center;
+    text-align: center;
 }
+.buttonCell{
+    display:flex;
+    flex-direction: row;
+}
+
+@media (max-width: 600px) {
+    .buttonCell {
+        flex-direction: column;
+    }
+  }

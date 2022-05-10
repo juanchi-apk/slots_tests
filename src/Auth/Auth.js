@@ -66,7 +66,7 @@ function Auth({setAuthToken}) {
                 bgImageStyle={{ opacity: '.4 ' }}
                 >
                     <Fade direction="left" delay={1000}>
-                        <div className='col-5 formcontainer'>
+                        <div className='formcontainer'>
 
                             <div className="signup-form">
                                 <form onSubmit={handleSubmit} method="post">
